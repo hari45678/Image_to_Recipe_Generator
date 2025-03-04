@@ -1,0 +1,5 @@
+{
+  "python.analysis.extraPaths": [
+    "./Image_to_Recipe_Generator"
+  ]
+}
