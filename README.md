@@ -1,4 +1,4 @@
-# Culinary Oracle AI - Image to Recipe Generator
+# Recipe Vision With AI - Image to Recipe Generator
 
 Transform food images into detailed recipes using AI! This application uses Google's Gemini AI to analyze food images and generate comprehensive recipes with ingredients and instructions.
 
