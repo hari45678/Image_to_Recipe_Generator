@@ -1,1 +1,1 @@
-web: gunicorn --chdir app/api main:app -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT --timeout 180 
+web: cd app/api && gunicorn main:app -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT --timeout 180 
