@@ -1,5 +1,6 @@
 fastapi==0.109.2
 uvicorn==0.27.1
+gunicorn==21.2.0
 streamlit==1.31.1
 torch==2.1.0
 torchvision==0.16.0
@@ -12,3 +13,6 @@ python-multipart==0.0.9
 google-generativeai>=0.3.2
 requests==2.31.0
 python-dotenv==1.0.1
+httptools
+uvloop
+websockets

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: image-recipe-generator-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --chdir app/api main:app -k uvicorn.workers.UvicornWorker -b 0.0.0.0:$PORT --timeout 180
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.7
+      - key: GENAI_API_KEY
+        sync: false
+    healthCheckPath: /
+    autoDeploy: true
