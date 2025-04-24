@@ -42,9 +42,21 @@ GENAI_API_KEY=your_api_key_here
 ## Running the Application
 
 1. Start the FastAPI backend:
-```bash
-cd app
-uvicorn api.main:app --reload
+
+### Using the provided PowerShell script (Windows PowerShell):
+```powershell
+.\run_uvicorn.ps1
+```
+
+This script activates the virtual environment and runs the uvicorn server with hot reload enabled.
+
+### Or manually activate the virtual environment and run uvicorn:
+```powershell
+# Activate virtual environment
+.\ml_env\Scripts\Activate.ps1
+
+# Run uvicorn server
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 2. In a new terminal, start the Streamlit frontend:
@@ -52,6 +64,8 @@ uvicorn api.main:app --reload
 cd app
 streamlit run frontend/streamlit_app.py
 ```
+streamlit run frontend/streamlit_app.py
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 3. Open your browser and navigate to `http://localhost:8501`
 
